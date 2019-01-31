@@ -1,4 +1,4 @@
-# ESLint/Prettier & Standard's Style Guide for React Apps
+# ESLint/Prettier & StandardJS Style Guide for React Apps
 
 **Make sure you `npm init`, or at least have a _package.json_ file before proceeding!**
 
