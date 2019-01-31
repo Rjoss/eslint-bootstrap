@@ -10,8 +10,8 @@ echo -e "${GREEN}Starting Style Formatting Configuration... ${NC}"
 echo -e "1/5 ${LCYAN}Local ESLint & Prettier Installation... ${NC}"
 npm install -D eslint@5.6.0 prettier
 
-echo -e "2/5 ${YELLOW}Airbnb Configuration Installation... ${NC}"
-npm install -D eslint-config-airbnb eslint-plugin-jsx-a11y eslint-plugin-import eslint-plugin-react babel-eslint
+echo -e "2/5 ${YELLOW}Standard Configuration Installation... ${NC}"
+npm install -D eslint-config-standard eslint-plugin-jsx-a11y eslint-plugin-import eslint-plugin-react babel-eslint
 
 echo -e "3/5 ${LCYAN}Disabling ESLint Formatting... ${NC}"
 npm install -D eslint-config-prettier eslint-plugin-prettier eslint-plugin-flowtype@2.50.3 eslint-config-react-app
@@ -20,7 +20,7 @@ echo -e "4/5 ${YELLOW}Creating ESLint JSON... ${NC}"
 touch .eslintrc.json
 
 echo '{
-  "extends": ["airbnb", "prettier", "react-app", "plugin:prettier/recommended"],
+  "extends": ["standard", "prettier", "react-app", "plugin:prettier/recommended"],
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": ["error"],
@@ -34,8 +34,10 @@ touch .prettierrc
 
 echo '{
   "printWidth": 100,
-  "singleQuote": true
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "jsxBracketSameLine": true,
+  "arrowParens": "always"
 }' >> .prettierrc
 
 echo -e "${GREEN}Done! ${NC}"
-
